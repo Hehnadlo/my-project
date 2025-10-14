@@ -8,25 +8,45 @@ Vytvorte jednorozmerne pole s velkostou 10 a naplnte ho nahodnymi celymi cislami
 #include <stdio.h>                                                    
 #include <stdlib.h>  
 
-//funkcia generovania nahodneho cisla v rozsahu min, max
-int nahodneCislo(int min, int max) {
-        return (rand () % (max - min + 1)) + min;
+// ### Deklaracia funkcii ###
 
-}
+// Generuje nahodne cele cislo v r rozsahu min, max
+int nahodneCislo(int min, int max);
+
+// Vypise hodnoty prvkov pola pod seba
+void vypisPole(int pole[], int pocet);
+
+// Naplni prvky pola celociselnymi hodnotami v rozsahu min, max
+void naplnPoleNahodnymiCislami(int pole[], int pocet, int minHodnota, int maxHodnota);
 
 int main(void) {
+    const int pocetPrvkov = 100;        // Velkost pola
+    const int minNahodneCislo = 0;      // minimalna hodnota nahodneho cisla
+    const int maxNahodneCislo = 200;    // maximalna hodnota nahodneho cisla
 
-    //pole s 10 timi prvkami
-    int array[10];
- 
-    // naplnenie pola nahodnymi cislami
-    for (int i = 0; i < 10; i++) {
-        array[i] = nahodneCislo(0, 9);  // ulozenie cisla do pola
-    }
+    int array[pocetPrvkov];             // pole prvkov
 
-    // vypisanie obshau pola
-    for (int i = 0; i < 10; i++) {
-        printf("array[%d] = %d\n", i, array[i]);
-    }
+    naplnPoleNahodnymiCislami(array, pocetPrvkov, minNahodneCislo, maxNahodneCislo);
+
+    vypisPole(array, pocetPrvkov);
+
     return 0;
+}
+
+
+// ### Definicie funkcii
+int nahodneCislo(int min, int max) {
+        return (rand () % (max - min + 1)) + min;
+}
+
+void vypisPole(int pole[], int pocet){
+    for (int i = 0; i < pocet; i++) {
+        printf("array[%d] = %d\n", i+1, pole[i]);
+    }
+}
+
+void naplnPoleNahodnymiCislami(int pole[], int pocet, int minHodnota, int maxHodnota){
+    for (int r = 0; r < pocet; r++) {
+        pole[r]= nahodneCislo(minHodnota, maxHodnota);
+    }
 }
