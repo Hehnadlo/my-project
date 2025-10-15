@@ -24,9 +24,9 @@ void vypisPole(int pole[], int pocet);
 void naplnPoleNahodnymiCislami(int pole[], int pocet, int minHodnota, int maxHodnota);
 
 int main(void) {
-    const int pocetPrvkov = 100;        // Velkost pola
-    const int minNahodneCislo = 0;      // minimalna hodnota nahodneho cisla
-    const int maxNahodneCislo = 200;    // maximalna hodnota nahodneho cisla
+    const int pocetPrvkov = 100;  // Velkost pola
+    int minNahodneCislo = 0;      // minimalna hodnota nahodneho cisla
+    int maxNahodneCislo = 200;    // maximalna hodnota nahodneho cisla
 
     int array[pocetPrvkov];             // pole prvkov
 
