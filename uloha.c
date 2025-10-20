@@ -1,9 +1,13 @@
-/*
-Uloha c 1
-Vytvorte jednorozmerne pole s velkostou 10 a naplnte ho nahodnymi celymi cislami. Cisla generujte pomocou funkcie, ktora ako argumenty prijima minimalnu a maximalnu hodnotu. Po naplneni pola vypiste kazdy prvok spolu s jeho indexom pricom na vypis pouzite samostatnu funkciu.
- 
- Autor: Jana Chytilova
- */
+//
+//  uloha.c
+//  
+//  Created by Jana on 10/10/2024.
+//
+//  Uloha c 1
+//  Vytvorte jednorozmerne pole s velkostou 10 a naplnte ho nahodnymi celymi cislami.
+//  Cisla generujte pomocou funkcie, ktora ako argumenty prijima minimalnu a maximalnu hodnotu.
+//  Po naplneni pola vypiste kazdy prvok spolu s jeho indexom pricom na vypis pouzite samostatnu funkciu.
+
 
 #include <stdio.h>                                                    
 #include <stdlib.h>
@@ -24,7 +28,8 @@ void naplnPoleNahodnymiCislami(int pole[], int pocet, int minHodnota, int maxHod
 int obsahujeHodnotu(int pole[], int pocet, int hladanaHodnota);
 
 int main(void) {
-    const int pocetPrvkov = 100;        // Velkost pola
+<<<<<<< HEAD
+    const int pocetPrvkov = 100;   // Velkost pola
     int minNahodneCislo = 0;      // minimalna hodnota nahodneho cisla
     int maxNahodneCislo = 200;    // maximalna hodnota nahodneho cisla
 
