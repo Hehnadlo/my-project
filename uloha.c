@@ -7,7 +7,11 @@
 //  Vytvorte jednorozmerne pole s velkostou 10 a naplnte ho nahodnymi celymi cislami.
 //  Cisla generujte pomocou funkcie, ktora ako argumenty prijima minimalnu a maximalnu hodnotu.
 //  Po naplneni pola vypiste kazdy prvok spolu s jeho indexom pricom na vypis pouzite samostatnu funkciu.
-
+//
+//  Uloha c 2
+//  Upravte program z ulohy 1 na velkost pola 100. Doplnte premennu, do ktorej zapisete nahodne cislo. V
+//  Vytvorte funkciu, ktora zisti, ci pole obsahuje hodnotu tejto premennej. Vysledok vypiste. 
+//  Pre naplnenie hodnot pola napiste tiez samostatnu funkciu.
 
 #include <stdio.h>                                                    
 #include <stdlib.h>
