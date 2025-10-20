@@ -6,7 +6,8 @@ Vytvorte jednorozmerne pole s velkostou 10 a naplnte ho nahodnymi celymi cislami
  */
 
 #include <stdio.h>                                                    
-#include <stdlib.h>  
+#include <stdlib.h>
+#include <time.h>  
 
 // ### Deklaracia funkcii ###
 
@@ -19,16 +20,33 @@ void vypisPole(int pole[], int pocet);
 // Naplni prvky pola celociselnymi hodnotami v rozsahu min, max
 void naplnPoleNahodnymiCislami(int pole[], int pocet, int minHodnota, int maxHodnota);
 
+//
+int obsahujeHodnotu(int pole[], int pocet, int hladanaHodnota);
+
 int main(void) {
     const int pocetPrvkov = 100;        // Velkost pola
-    const int minNahodneCislo = 0;      // minimalna hodnota nahodneho cisla
-    const int maxNahodneCislo = 200;    // maximalna hodnota nahodneho cisla
+    int minNahodneCislo = 0;      // minimalna hodnota nahodneho cisla
+    int maxNahodneCislo = 200;    // maximalna hodnota nahodneho cisla
 
     int array[pocetPrvkov];             // pole prvkov
 
+    //generator nahodnych cisel
+    srand(time(NULL));
+
     naplnPoleNahodnymiCislami(array, pocetPrvkov, minNahodneCislo, maxNahodneCislo);
 
+    // Generovanie čísla, ktoré budeme hľadať
+    int hladaneCislo = nahodneCislo(minNahodneCislo, maxNahodneCislo);
+    printf("Hľadané číslo: %d\n\n", hladaneCislo);
+
     vypisPole(array, pocetPrvkov);
+
+    // Hľadanie hodnoty v poli
+    if (obsahujeHodnotu(array, pocetPrvkov, hladaneCislo)) {
+        printf("\nČíslo %d sa nachádza v poli.\n", hladaneCislo);
+    } else {
+        printf("\nČíslo %d sa nenachádza v poli.\n\n", hladaneCislo);
+    }
 
     return 0;
 }
@@ -49,4 +67,14 @@ void naplnPoleNahodnymiCislami(int pole[], int pocet, int minHodnota, int maxHod
     for (int r = 0; r < pocet; r++) {
         pole[r]= nahodneCislo(minHodnota, maxHodnota);
     }
+}
+
+//Zisti, ci sa hodnota nachadza v poli
+int obsahujeHodnotu(int pole[], int pocet, int hladanaHodnota){
+    for (int i = 0; i < pocet; i++) {
+        if (pole[i] == hladanaHodnota) {
+            return 1; // našli sme hodnotu
+        }
+    }
+    return 0; // nenašli sme hodnotu
 }
