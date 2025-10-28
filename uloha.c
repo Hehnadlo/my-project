@@ -33,7 +33,7 @@ void naplnPoleNahodnymiCislami(int pole[], int pocet, int minHodnota, int maxHod
 int obsahujeHodnotu(int pole[], int pocet, int hladanaHodnota);
 
 int main(void) {
-<<<<<<< HEAD
+
     const int pocetPrvkov = 100;   // Velkost pola
     int minNahodneCislo = 0;      // minimalna hodnota nahodneho cisla
     int maxNahodneCislo = 200;    // maximalna hodnota nahodneho cisla
