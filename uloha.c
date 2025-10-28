@@ -12,6 +12,7 @@
 //  Upravte program z ulohy 1 na velkost pola 100. Doplnte premennu, do ktorej zapisete nahodne cislo. V
 //  Vytvorte funkciu, ktora zisti, ci pole obsahuje hodnotu tejto premennej. Vysledok vypiste. 
 //  Pre naplnenie hodnot pola napiste tiez samostatnu funkciu.
+////////////////////////////////////////////////////////
 
 #include <stdio.h>                                                    
 #include <stdlib.h>
