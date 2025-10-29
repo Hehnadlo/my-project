@@ -44,6 +44,8 @@ int main(void) {
 
     naplnPoleNahodnymiCislami(array, pocetPrvkov, minNahodneCislo, maxNahodneCislo);
 
+    vypisPole(array, pocetPrvkov);
+
     int hladaneCislo;
     int *smernik;
 
@@ -61,12 +63,8 @@ int main(void) {
     }
 
     return 0;
+}
 
-    vypisPole(array, pocetPrvkov);
-
-}  // END OF MAIN
-
-    
 
 // ### Definicie funkcii
 int nahodneCislo(int min, int max) {
@@ -85,7 +83,7 @@ void naplnPoleNahodnymiCislami(int pole[], int pocet, int minHodnota, int maxHod
     }
 }
 
-
+//Zisti, ci sa hodnota nachadza v poli
 int *obsahujeHodnotu(int pole[], int pocet, int hladanaHodnota){
     for (int i = 0; i < pocet; i++) {
         if (pole[i] == hladanaHodnota) {
@@ -93,5 +91,4 @@ int *obsahujeHodnotu(int pole[], int pocet, int hladanaHodnota){
         }
     }
     return NULL; // nenašli sme hodnotu
-
 }
